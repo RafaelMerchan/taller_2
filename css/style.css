@@ -1,0 +1,119 @@
+/*
+  Desde Google Fonts, importe las fuentes "Roboto". Específicamente "Thin 100", "Bold 700" y "Regular 400". 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+
+
+/*
+  Utilice el selector para la etiqueta body
+  
+  Aplique las propiedades CSS: 
+    familia de fuentes: 'Roboto', sans-serif
+*/
+body {
+  font-family: 'Roboto',sans-serif;
+}
+
+
+
+/* 
+  Utilice el selector para la clase "inner-product"
+
+  Aplique las propiedades CSS: 
+    Muestre los elementos mediante "grid"
+    Espacio entre columnas 1rem
+
+  NOTA: 
+  
+  Para ubicar los elementos internos al elemento con clase "inner-product", 
+  tome como referencia la imagen "grid-referencia.png"
+
+*/
+.inner-product {
+  display: grid; 
+  column-gap: 1rem;
+  grid-template-areas:  "A "
+                        "B "
+                        "D "
+                        "M ";
+}
+
+
+#figure-image {
+  grid-area: A;
+}
+#product-title {
+  grid-area: B;
+}
+#price {
+  grid-area: D;
+}
+#button {
+  grid-area: M;
+}
+
+
+/*
+  Utilice el selector para la clase "inner-product"
+
+  Aplique las propiedades CSS:
+    Borde con radio: 8px
+    Relleno de la caja: 15px
+    Color de fondo de la caja: floralwhite
+    El texto está centrado
+*/
+.inner-product {
+  border-radius: 8px;
+  padding-block: 15px;
+  background-color: floralwhite;
+  text-align: center;
+}
+
+
+/*
+  Utilice el selector para el identificador "list"
+
+  Aplique las propiedades CSS:
+    Muestre los elementos mediante "flex"
+    Los elementos se alinean en filas
+    Los elementos se muestran en varias filas
+    Los elementos se justifican en el centro
+*/
+#list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+
+
+
+
+/*
+  - Para dispositivos con ancho máximo de 834px -
+
+  Utilice el selector para el identificador "list"
+
+    Aplique las propiedades CSS:
+
+      Muestre los elementos mediante "flex"
+      Los elementos se alinean en columna, en orden inverso.
+      Los elementos se justifican en el centro
+    
+  Utilice el selector ara las etiquetas div con clase "figure-image"
+
+    Aplique las propiedades CSS:
+      Desaparece el contenido
+*/
+#list[width = 834px]{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+div[class = "figure-image"]{
+  content-visibility: fade;
+}
+
